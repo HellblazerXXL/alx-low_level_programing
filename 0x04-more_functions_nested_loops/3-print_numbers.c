@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print numbers - entry point
+ * print_numbers - entry point
  *
  * Description: Prints the numbers with _putchar
  *
@@ -14,7 +14,7 @@ void print_numbers(void)
 
 	for (number = '0'; number <= '9'; number++)
 	{
-			_putchar(number);
+		_putchar(number);
 	}
 	_putchar('\n');
 }
