@@ -3,29 +3,27 @@
 #include <time.h>
 
 /**
- * main- generate password
- * Return: nothing
+ * main - creates a password of sum 2772
+ *
+ * Return: 0;
  */
 int main(void)
 {
-	srand((unsigned int)time(NULL));
-	char pass[13];
-	int i;
+	int keynumber, symbol, checksum;
 
-	for (i = 0; i < 4; i++)
+	srand(time(NULL));
+	checksum = 2772;
+	keynumber = 0;
+
+	while (keynumber < (checksum - 122))
 	{
-
-		pass[3 * i] = '0' + (rand() % 10);
-		char capletter = 'A' + (rand() & 26);
-
-		pass[(3 * i) + 1] = capletter;
-		char letter = 'a' + (rand() % 26);
-
-		pass[(3 * i) + 2] = letter;
+		symbol = (rand() % (122 - 97 + 1)) + 97;/*to print mostly lowercaseletters*/
+		printf("%c", symbol);
+		keynumber = keynumber + symbol;
 	}
-	pass[3 * i] = '\0';
-	printf("generated password : %s\n\n", pass);
 
-	printf("\n\n");
+	symbol = checksum - keynumber;
+	printf("%c", symbol);
+
 	return (0);
 }
