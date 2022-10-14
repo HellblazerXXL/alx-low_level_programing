@@ -1,21 +1,20 @@
 #include "main.h"
 
 /**
- * _puts - swaps integers with pointers.
+ * _puts - prints a string and a new line
+ * @str: pointer to a string to print
  *
- * @str: is pointer to a char.
- *
- * char: is a data type.
- * Return: Always 0.
+ * Return: 0
  */
+
 void _puts(char *str)
 {
-int c = 0;
+	int i = 0;
 
-while (*(str + c) != '\0')
-{
-_putchar(*(str + c));
-c++;
-}
-_putchar('\n');
+	while (str[i])
+	{
+		_putchar(str[i]);
+		i++;
+	}
+	_putchar('\n');
 }

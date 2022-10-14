@@ -1,15 +1,24 @@
 #include "main.h"
+
 /**
  * _abs - Entry point
- *
- * @r: r is variable name
- *
- * Return: Always 0 (Success)
+ * @n: n is an integer
+ * Description: prints the absolute value of an integer
+ * Return: int
  */
-int _abs(int r)
+
+int _abs(int n)
 {
-if (r < 0)
-return (-r);
-else
-return (r);
+	if (n > 0)
+	{
+		return (n);
+	}
+	else if (n < 0)
+	{
+		return (-n);
+	}
+	else
+	{
+		return (n);
+	}
 }

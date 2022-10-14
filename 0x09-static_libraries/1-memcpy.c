@@ -1,22 +1,20 @@
 #include "main.h"
 
 /**
- * _memcpy - This function fills memory with a constant byte
- *
- * @dest: is a pointer to a char
- * @src: is a pointer to a char
- * @n: is an unsigned int
- *
- * Return: Returns the transformed pointer
- *
-**/
+ * _memcpy - memory copy
+ * @dest:is destination memory
+ * @src: is source memory
+ * @n: number of bytes to be copied
+ * Return: string copied from source
+ */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-unsigned int i;
+	unsigned int a = 0;
 
-for (i = 0; i < n; i++)
-dest[i] = src[i];
-
-return (dest);
+	for (a = 0; a < n; a++)
+	{
+		dest[a] = src[a];
+	}
+	return (dest);
 }

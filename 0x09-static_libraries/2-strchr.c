@@ -1,25 +1,22 @@
 #include "main.h"
 
 /**
- * _strchr - locates a character in a string.
- *
- * @s: is a pointer to a char
- * @c: is a pointer to a char
- *
- * Return: Return the transformed pointer
- *
-**/
+ * _strchr - string character
+ * @s: string given
+ * @c: another char
+ * Return: a string
+ */
 
 char *_strchr(char *s, char c)
 {
-while (*s != '\0')
-{
-if (*s == c)
-return (s);
-s++;
-}
-if (*s == c)
-return (s);
+	int a;
 
-return (0);
+	for (a = 0; *(s + a); a++)
+	{
+		if (*(s + a) == c)
+			return (s + a);
+	}
+	if (*(s + a) == c)
+		return (s + a);
+	return (0);
 }
